@@ -39,7 +39,7 @@
             this.cbxTipousu = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkCpass = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -88,6 +88,7 @@
             // btnAcceder
             // 
             this.btnAcceder.BackColor = System.Drawing.Color.Black;
+            this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAcceder.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAcceder.ForeColor = System.Drawing.Color.White;
             this.btnAcceder.Location = new System.Drawing.Point(285, 206);
@@ -149,6 +150,7 @@
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.Black;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalir.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.White;
             this.btnSalir.Location = new System.Drawing.Point(175, 206);
@@ -159,17 +161,18 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // linkLabel1
+            // linkCpass
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(13, 183);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(75, 13);
-            this.linkLabel1.TabIndex = 8;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Cambiar Clave";
-            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.linkCpass.AutoSize = true;
+            this.linkCpass.LinkColor = System.Drawing.Color.White;
+            this.linkCpass.Location = new System.Drawing.Point(13, 183);
+            this.linkCpass.Name = "linkCpass";
+            this.linkCpass.Size = new System.Drawing.Size(75, 13);
+            this.linkCpass.TabIndex = 8;
+            this.linkCpass.TabStop = true;
+            this.linkCpass.Text = "Cambiar Clave";
+            this.linkCpass.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.linkCpass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCpass_LinkClicked);
             // 
             // linkLabel2
             // 
@@ -190,7 +193,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(401, 259);
             this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.linkCpass);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
@@ -218,7 +221,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkCpass;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbxTipousu;

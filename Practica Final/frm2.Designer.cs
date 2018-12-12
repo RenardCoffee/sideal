@@ -29,20 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm2));
             this.lblAdmin = new System.Windows.Forms.Label();
             this.lblAlumno = new System.Windows.Forms.Label();
             this.lblMaestro = new System.Windows.Forms.Label();
             this.grbAdmin = new System.Windows.Forms.GroupBox();
-            this.grbMaestro = new System.Windows.Forms.GroupBox();
-            this.grbAlumno = new System.Windows.Forms.GroupBox();
-            this.btnCambiarClave = new System.Windows.Forms.Button();
-            this.btnKardex = new System.Windows.Forms.Button();
-            this.btnCClaveMaestro = new System.Windows.Forms.Button();
-            this.btnCClaveAdmin = new System.Windows.Forms.Button();
-            this.btnHistorial = new System.Windows.Forms.Button();
-            this.btnPMU = new System.Windows.Forms.Button();
-            this.btnABCMMaestro = new System.Windows.Forms.Button();
             this.btnABCCAdmin = new System.Windows.Forms.Button();
+            this.btnPMU = new System.Windows.Forms.Button();
+            this.btnHistorial = new System.Windows.Forms.Button();
+            this.btnCClaveAdmin = new System.Windows.Forms.Button();
+            this.grbMaestro = new System.Windows.Forms.GroupBox();
+            this.btnABCMMaestro = new System.Windows.Forms.Button();
+            this.btnCClaveMaestro = new System.Windows.Forms.Button();
+            this.grbAlumno = new System.Windows.Forms.GroupBox();
+            this.btnKardex = new System.Windows.Forms.Button();
+            this.btnCambiarClave = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.grbAdmin.SuspendLayout();
             this.grbMaestro.SuspendLayout();
@@ -97,6 +98,54 @@
             this.grbAdmin.TabStop = false;
             this.grbAdmin.Text = "Pantallas Administrador";
             // 
+            // btnABCCAdmin
+            // 
+            this.btnABCCAdmin.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnABCCAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnABCCAdmin.Location = new System.Drawing.Point(356, 31);
+            this.btnABCCAdmin.Name = "btnABCCAdmin";
+            this.btnABCCAdmin.Size = new System.Drawing.Size(114, 82);
+            this.btnABCCAdmin.TabIndex = 5;
+            this.btnABCCAdmin.Text = "Altas, Bajas, Cambios, Consultas";
+            this.btnABCCAdmin.UseVisualStyleBackColor = false;
+            this.btnABCCAdmin.Click += new System.EventHandler(this.btnABCCAdmin_Click);
+            // 
+            // btnPMU
+            // 
+            this.btnPMU.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnPMU.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPMU.Location = new System.Drawing.Point(217, 31);
+            this.btnPMU.Name = "btnPMU";
+            this.btnPMU.Size = new System.Drawing.Size(116, 82);
+            this.btnPMU.TabIndex = 4;
+            this.btnPMU.Text = "Pantalla Maestra Usuarios";
+            this.btnPMU.UseVisualStyleBackColor = false;
+            this.btnPMU.Click += new System.EventHandler(this.btnPMU_Click);
+            // 
+            // btnHistorial
+            // 
+            this.btnHistorial.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnHistorial.Location = new System.Drawing.Point(117, 31);
+            this.btnHistorial.Name = "btnHistorial";
+            this.btnHistorial.Size = new System.Drawing.Size(78, 82);
+            this.btnHistorial.TabIndex = 3;
+            this.btnHistorial.Text = "Historial";
+            this.btnHistorial.UseVisualStyleBackColor = false;
+            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
+            // 
+            // btnCClaveAdmin
+            // 
+            this.btnCClaveAdmin.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnCClaveAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCClaveAdmin.Location = new System.Drawing.Point(22, 31);
+            this.btnCClaveAdmin.Name = "btnCClaveAdmin";
+            this.btnCClaveAdmin.Size = new System.Drawing.Size(78, 82);
+            this.btnCClaveAdmin.TabIndex = 2;
+            this.btnCClaveAdmin.Text = "Cambio de clave";
+            this.btnCClaveAdmin.UseVisualStyleBackColor = false;
+            this.btnCClaveAdmin.Click += new System.EventHandler(this.btnCClaveAdmin_Click);
+            // 
             // grbMaestro
             // 
             this.grbMaestro.Controls.Add(this.btnABCMMaestro);
@@ -109,6 +158,32 @@
             this.grbMaestro.TabIndex = 4;
             this.grbMaestro.TabStop = false;
             this.grbMaestro.Text = "Pantallas Maestro";
+            // 
+            // btnABCMMaestro
+            // 
+            this.btnABCMMaestro.BackColor = System.Drawing.Color.Red;
+            this.btnABCMMaestro.FlatAppearance.BorderSize = 0;
+            this.btnABCMMaestro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnABCMMaestro.Location = new System.Drawing.Point(23, 40);
+            this.btnABCMMaestro.Name = "btnABCMMaestro";
+            this.btnABCMMaestro.Size = new System.Drawing.Size(114, 82);
+            this.btnABCMMaestro.TabIndex = 2;
+            this.btnABCMMaestro.Text = "Altas, Bajas, Cambios, Consultas";
+            this.btnABCMMaestro.UseVisualStyleBackColor = false;
+            this.btnABCMMaestro.Click += new System.EventHandler(this.btnABCMMaestro_Click);
+            // 
+            // btnCClaveMaestro
+            // 
+            this.btnCClaveMaestro.BackColor = System.Drawing.Color.Red;
+            this.btnCClaveMaestro.FlatAppearance.BorderSize = 0;
+            this.btnCClaveMaestro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCClaveMaestro.Location = new System.Drawing.Point(177, 40);
+            this.btnCClaveMaestro.Name = "btnCClaveMaestro";
+            this.btnCClaveMaestro.Size = new System.Drawing.Size(78, 82);
+            this.btnCClaveMaestro.TabIndex = 1;
+            this.btnCClaveMaestro.Text = "Cambio de clave";
+            this.btnCClaveMaestro.UseVisualStyleBackColor = false;
+            this.btnCClaveMaestro.Click += new System.EventHandler(this.btnCClaveMaestro_Click);
             // 
             // grbAlumno
             // 
@@ -123,20 +198,10 @@
             this.grbAlumno.TabStop = false;
             this.grbAlumno.Text = "Pantallas Alumno";
             // 
-            // btnCambiarClave
-            // 
-            this.btnCambiarClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnCambiarClave.Location = new System.Drawing.Point(48, 40);
-            this.btnCambiarClave.Name = "btnCambiarClave";
-            this.btnCambiarClave.Size = new System.Drawing.Size(78, 82);
-            this.btnCambiarClave.TabIndex = 0;
-            this.btnCambiarClave.Text = "Cambio de clave";
-            this.btnCambiarClave.UseVisualStyleBackColor = false;
-            this.btnCambiarClave.Click += new System.EventHandler(this.btnCambiarClave_Click);
-            // 
             // btnKardex
             // 
             this.btnKardex.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnKardex.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnKardex.Location = new System.Drawing.Point(162, 40);
             this.btnKardex.Name = "btnKardex";
             this.btnKardex.Size = new System.Drawing.Size(78, 82);
@@ -145,71 +210,17 @@
             this.btnKardex.UseVisualStyleBackColor = false;
             this.btnKardex.Click += new System.EventHandler(this.btnKardex_Click);
             // 
-            // btnCClaveMaestro
+            // btnCambiarClave
             // 
-            this.btnCClaveMaestro.BackColor = System.Drawing.Color.Red;
-            this.btnCClaveMaestro.Location = new System.Drawing.Point(177, 40);
-            this.btnCClaveMaestro.Name = "btnCClaveMaestro";
-            this.btnCClaveMaestro.Size = new System.Drawing.Size(78, 82);
-            this.btnCClaveMaestro.TabIndex = 1;
-            this.btnCClaveMaestro.Text = "Cambio de clave";
-            this.btnCClaveMaestro.UseVisualStyleBackColor = false;
-            this.btnCClaveMaestro.Click += new System.EventHandler(this.btnCClaveMaestro_Click);
-            // 
-            // btnCClaveAdmin
-            // 
-            this.btnCClaveAdmin.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnCClaveAdmin.Location = new System.Drawing.Point(22, 31);
-            this.btnCClaveAdmin.Name = "btnCClaveAdmin";
-            this.btnCClaveAdmin.Size = new System.Drawing.Size(78, 82);
-            this.btnCClaveAdmin.TabIndex = 2;
-            this.btnCClaveAdmin.Text = "Cambio de clave";
-            this.btnCClaveAdmin.UseVisualStyleBackColor = false;
-            this.btnCClaveAdmin.Click += new System.EventHandler(this.btnCClaveAdmin_Click);
-            // 
-            // btnHistorial
-            // 
-            this.btnHistorial.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnHistorial.Location = new System.Drawing.Point(117, 31);
-            this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Size = new System.Drawing.Size(78, 82);
-            this.btnHistorial.TabIndex = 3;
-            this.btnHistorial.Text = "Historial";
-            this.btnHistorial.UseVisualStyleBackColor = false;
-            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
-            // 
-            // btnPMU
-            // 
-            this.btnPMU.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnPMU.Location = new System.Drawing.Point(217, 31);
-            this.btnPMU.Name = "btnPMU";
-            this.btnPMU.Size = new System.Drawing.Size(116, 82);
-            this.btnPMU.TabIndex = 4;
-            this.btnPMU.Text = "Pantalla Maestra Usuarios";
-            this.btnPMU.UseVisualStyleBackColor = false;
-            this.btnPMU.Click += new System.EventHandler(this.btnPMU_Click);
-            // 
-            // btnABCMMaestro
-            // 
-            this.btnABCMMaestro.BackColor = System.Drawing.Color.Red;
-            this.btnABCMMaestro.Location = new System.Drawing.Point(23, 40);
-            this.btnABCMMaestro.Name = "btnABCMMaestro";
-            this.btnABCMMaestro.Size = new System.Drawing.Size(114, 82);
-            this.btnABCMMaestro.TabIndex = 2;
-            this.btnABCMMaestro.Text = "Altas, Bajas, Cambios, Consultas";
-            this.btnABCMMaestro.UseVisualStyleBackColor = false;
-            this.btnABCMMaestro.Click += new System.EventHandler(this.btnABCMMaestro_Click);
-            // 
-            // btnABCCAdmin
-            // 
-            this.btnABCCAdmin.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnABCCAdmin.Location = new System.Drawing.Point(356, 31);
-            this.btnABCCAdmin.Name = "btnABCCAdmin";
-            this.btnABCCAdmin.Size = new System.Drawing.Size(114, 82);
-            this.btnABCCAdmin.TabIndex = 5;
-            this.btnABCCAdmin.Text = "Altas, Bajas, Cambios, Consultas";
-            this.btnABCCAdmin.UseVisualStyleBackColor = false;
-            this.btnABCCAdmin.Click += new System.EventHandler(this.btnABCCAdmin_Click);
+            this.btnCambiarClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnCambiarClave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCambiarClave.Location = new System.Drawing.Point(48, 40);
+            this.btnCambiarClave.Name = "btnCambiarClave";
+            this.btnCambiarClave.Size = new System.Drawing.Size(78, 82);
+            this.btnCambiarClave.TabIndex = 0;
+            this.btnCambiarClave.Text = "Cambio de clave";
+            this.btnCambiarClave.UseVisualStyleBackColor = false;
+            this.btnCambiarClave.Click += new System.EventHandler(this.btnCambiarClave_Click);
             // 
             // contextMenuStrip1
             // 
@@ -228,6 +239,7 @@
             this.Controls.Add(this.lblMaestro);
             this.Controls.Add(this.lblAlumno);
             this.Controls.Add(this.lblAdmin);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú Principal";
@@ -241,21 +253,20 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblAdmin;
-        private System.Windows.Forms.Label lblAlumno;
-        private System.Windows.Forms.Label lblMaestro;
-        private System.Windows.Forms.GroupBox grbAdmin;
         private System.Windows.Forms.Button btnABCCAdmin;
         private System.Windows.Forms.Button btnPMU;
         private System.Windows.Forms.Button btnHistorial;
         private System.Windows.Forms.Button btnCClaveAdmin;
-        private System.Windows.Forms.GroupBox grbMaestro;
         private System.Windows.Forms.Button btnABCMMaestro;
         private System.Windows.Forms.Button btnCClaveMaestro;
-        private System.Windows.Forms.GroupBox grbAlumno;
         private System.Windows.Forms.Button btnKardex;
         private System.Windows.Forms.Button btnCambiarClave;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        public System.Windows.Forms.Label lblAdmin;
+        public System.Windows.Forms.Label lblAlumno;
+        public System.Windows.Forms.Label lblMaestro;
+        public System.Windows.Forms.GroupBox grbAdmin;
+        public System.Windows.Forms.GroupBox grbAlumno;
+        internal System.Windows.Forms.GroupBox grbMaestro;
     }
 }

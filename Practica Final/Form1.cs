@@ -97,15 +97,24 @@ namespace Practica_Final
                 if (cbxTipousu.Text == "ADMIN")
                 {
                     MessageBox.Show(UsuOBj.Mensaje, "Administrador");
-                    //frm2 frm2 = new frm2();
-                    //frm2.Show();
-                    //this.Hide();
+                    frm2 frm2 = new frm2(cbxTipousu.SelectedItem.ToString());
+                    frm2.Show();
+                    this.Hide();
                 }
                 else if (cbxTipousu.Text == "MAESTRO")
                 {
                     MessageBox.Show(UsuOBj.Mensaje, "Maestro");
+                    frm2 frm2 = new frm2(cbxTipousu.SelectedItem.ToString());
+                    frm2.Show();
+                    this.Hide();
                 }
-                else if(cbxTipousu.Text == "ALUMNO") { MessageBox.Show(UsuOBj.Mensaje, "Estudiante"); }
+                else if(cbxTipousu.Text == "ALUMNO")
+                {
+                   MessageBox.Show(UsuOBj.Mensaje, "Estudiante");
+                    frm2 frm2 = new frm2(cbxTipousu.SelectedItem.ToString());
+                    frm2.Show();
+                    this.Hide();
+                }
             }
             else {
                 MessageBox.Show(UsuOBj.Mensaje, "Usuario no existe!");
@@ -127,6 +136,12 @@ namespace Practica_Final
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void linkCpass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frm3 frmCpass = new frm3();
+            frmCpass.ShowDialog();
         }
     }
 }

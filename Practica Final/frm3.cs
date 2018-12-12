@@ -14,8 +14,10 @@ using System.Data.SqlClient;
 namespace Practica_Final
 {
     public partial class frm3 : Form
-    {
-        private SqlConnection conexion = new SqlConnection("server=LAPTOP-QSFU5A2T\\SQLEXPRESS ; database=PracticaFinal ; integrated security = true");
+    {   //Brandon
+        private SqlConnection conexion = new SqlConnection("server=DESKTOP-KS5ITG4\\SQLUWU ; database=PracticaFinal ; integrated security = true");
+        //Priss
+        //private SqlConnection conexion = new SqlConnection("server=LAPTOP-QSFU5A2T\\SQLEXPRESS ; database=PracticaFinal ; integrated security = true");
         public frm3()
         {
             InitializeComponent();

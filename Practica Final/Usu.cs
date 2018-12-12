@@ -48,7 +48,7 @@ namespace Practica_Final
             if (Reg.Read())
             {
                 res = true;
-                this.mens = "Bienvenido Usuario";
+                this.mens = "Bienvenido a SiDeAl";
             }
             else {
                 this.mens = "Datos malos, verifique!";

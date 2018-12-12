@@ -18,45 +18,35 @@ namespace Practica_Final
         private SqlConnection conexion = new SqlConnection("server=DESKTOP-KS5ITG4\\SQLUWU ; database=PracticaFinal ; integrated security = true");
         //Computadora Priss
         //private SqlConnection conexion = new SqlConnection("server=LAPTOP-QSFU5A2T\\SQLEXPRESS ; database=PracticaFinal ; integrated security = true");
-        public frm2()
+        
+        public frm2(string tipo)
         {
             InitializeComponent();
-        }
-        public frm2(bool rdbAdmin,bool rdbAlu, bool rdbMas)
-        {
-            if(rdbAdmin == true)
+
+
+            if (tipo == "ADMIN")
             {
-                lblAdmin.Visible = true;
-                btnCClaveAdmin.Enabled = true;
-                btnABCCAdmin.Enabled = true;
-                btnHistorial.Enabled = true;
-                btnPMU.Enabled = true;
+                lblAdmin.ForeColor = Color.ForestGreen;
+                grbAlumno.Visible = false;
+                grbMaestro.Visible = false;
             }
-            if(rdbAlu == true)
+            else if (tipo == "ALUMNO")
             {
-                lblAlumno.Visible = true;
-                btnKardex.Enabled = true;
-                btnCambiarClave.Enabled = true;
+                lblAlumno.ForeColor = Color.FromArgb(255, 0, 192, 192);
+                grbAdmin.Visible = false;
+                grbMaestro.Visible = false;
             }
-            if(rdbMas == true)
+            else if (tipo == "MAESTRO")
             {
-                lblMaestro.Visible = true;
-                btnABCMMaestro.Enabled = true;
-                btnCClaveMaestro.Visible = true;
+                lblMaestro.ForeColor = Color.Red;
+                grbAdmin.Visible = false;
+                grbAlumno.Visible = false;
             }
         }
+       
         private void frm2_Load(object sender, EventArgs e)
         {
-            lblAdmin.Visible = false;
-            lblAlumno.Visible = false;
-            lblMaestro.Visible = false;
-            btnABCCAdmin.Enabled = false;
-            btnABCMMaestro.Enabled = false;
-            btnCambiarClave.Enabled = false;
-            btnCClaveAdmin.Enabled = false;
-            btnCClaveMaestro.Enabled = false;
-            btnKardex.Enabled = false;
-            btnPMU.Enabled = false;
+                
             
         }
 
@@ -89,7 +79,7 @@ namespace Practica_Final
         {
             frm4Kardex frm4 = new frm4Kardex();
             frm4.ShowDialog();
-            this.Hide();
+            
         }
 
         //Administrador
@@ -97,7 +87,7 @@ namespace Practica_Final
         {
             frm5Historial frm5 = new frm5Historial();
             frm5.ShowDialog();
-            this.Hide();
+            
         }
 
         //Administrador

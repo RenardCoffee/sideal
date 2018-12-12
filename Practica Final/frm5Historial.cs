@@ -7,14 +7,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Practica_Final
 {
     public partial class frm5Historial : Form
     {
+        string conn = "server=DESKTOP-KS5ITG4\\SQLUWU ; database=PracticaFinal ; integrated security = true";
         public frm5Historial()
         {
             InitializeComponent();
+        }
+
+        void PolulateDataGridAcc()
+        {
+            using (SqlConnection sqlCon = new SqlConnection(conn))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM TH_acceso ", sqlCon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                dtgAccesos.DataSource = dtbl;
+            }
+        }
+
+        void PolulateDataGridCla()
+        {
+            using (SqlConnection sqlCon = new SqlConnection(conn))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM TH_clave ", sqlCon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                dtgCClave.DataSource = dtbl;
+            }
         }
 
         private void rtbCClave_CheckedChanged(object sender, EventArgs e)
@@ -33,11 +59,14 @@ namespace Practica_Final
 
         private void frm5Historial_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'practicaFinalDataSet.TH_acceso' table. You can move, or remove it, as needed.
-            this.tH_accesoTableAdapter.Fill(this.practicaFinalDataSet.TH_acceso);
-            // TODO: This line of code loads data into the 'practicaFinalDataSet.TH_clave' table. You can move, or remove it, as needed.
-            this.tH_claveTableAdapter.Fill(this.practicaFinalDataSet.TH_clave);
+            PolulateDataGridAcc();
+            PolulateDataGridCla();
 
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

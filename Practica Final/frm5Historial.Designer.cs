@@ -28,30 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.rtbCClave = new System.Windows.Forms.RadioButton();
             this.rtbAccesos = new System.Windows.Forms.RadioButton();
             this.dtgCClave = new System.Windows.Forms.DataGridView();
             this.dtgAccesos = new System.Windows.Forms.DataGridView();
-            this.practicaFinalDataSet = new Practica_Final.PracticaFinalDataSet();
-            this.practicaFinalDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tHclaveBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tH_claveTableAdapter = new Practica_Final.PracticaFinalDataSetTableAdapters.TH_claveTableAdapter();
-            this.iDseqDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDusuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.claveantDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tHaccesoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tH_accesoTableAdapter = new Practica_Final.PracticaFinalDataSetTableAdapters.TH_accesoTableAdapter();
-            this.iDseqDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDusuarioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaaccesoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtID_seq = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtID_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtFecha_acceso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtID_seq2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtID_usuario2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtClave_ant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAtras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCClave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAccesos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.practicaFinalDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.practicaFinalDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tHclaveBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tHaccesoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // rtbCClave
@@ -85,14 +75,12 @@
             // 
             this.dtgCClave.AllowUserToAddRows = false;
             this.dtgCClave.AllowUserToDeleteRows = false;
-            this.dtgCClave.AutoGenerateColumns = false;
             this.dtgCClave.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgCClave.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDseqDataGridViewTextBoxColumn,
-            this.iDusuarioDataGridViewTextBoxColumn,
-            this.claveantDataGridViewTextBoxColumn,
-            this.fechaDataGridViewTextBoxColumn});
-            this.dtgCClave.DataSource = this.tHclaveBindingSource;
+            this.txtID_seq2,
+            this.txtID_usuario2,
+            this.txtClave_ant,
+            this.txtFecha});
             this.dtgCClave.Location = new System.Drawing.Point(59, 113);
             this.dtgCClave.Name = "dtgCClave";
             this.dtgCClave.ReadOnly = true;
@@ -103,92 +91,82 @@
             // 
             this.dtgAccesos.AllowUserToAddRows = false;
             this.dtgAccesos.AllowUserToDeleteRows = false;
-            this.dtgAccesos.AutoGenerateColumns = false;
             this.dtgAccesos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgAccesos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDseqDataGridViewTextBoxColumn1,
-            this.iDusuarioDataGridViewTextBoxColumn1,
-            this.fechaaccesoDataGridViewTextBoxColumn});
-            this.dtgAccesos.DataSource = this.tHaccesoBindingSource;
+            this.txtID_seq,
+            this.txtID_usuario,
+            this.txtFecha_acceso});
             this.dtgAccesos.Location = new System.Drawing.Point(59, 113);
             this.dtgAccesos.Name = "dtgAccesos";
             this.dtgAccesos.ReadOnly = true;
             this.dtgAccesos.Size = new System.Drawing.Size(599, 221);
             this.dtgAccesos.TabIndex = 3;
             // 
-            // practicaFinalDataSet
+            // txtID_seq
             // 
-            this.practicaFinalDataSet.DataSetName = "PracticaFinalDataSet";
-            this.practicaFinalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.txtID_seq.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txtID_seq.DataPropertyName = "ID_seq";
+            this.txtID_seq.HeaderText = "ID";
+            this.txtID_seq.Name = "txtID_seq";
+            this.txtID_seq.ReadOnly = true;
             // 
-            // practicaFinalDataSetBindingSource
+            // txtID_usuario
             // 
-            this.practicaFinalDataSetBindingSource.DataSource = this.practicaFinalDataSet;
-            this.practicaFinalDataSetBindingSource.Position = 0;
+            this.txtID_usuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txtID_usuario.DataPropertyName = "ID_usuario";
+            this.txtID_usuario.HeaderText = "Usuario";
+            this.txtID_usuario.Name = "txtID_usuario";
+            this.txtID_usuario.ReadOnly = true;
             // 
-            // tHclaveBindingSource
+            // txtFecha_acceso
             // 
-            this.tHclaveBindingSource.DataMember = "TH_clave";
-            this.tHclaveBindingSource.DataSource = this.practicaFinalDataSetBindingSource;
+            this.txtFecha_acceso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txtFecha_acceso.DataPropertyName = "Fecha_acceso";
+            this.txtFecha_acceso.HeaderText = "Fecha_acceso";
+            this.txtFecha_acceso.Name = "txtFecha_acceso";
+            this.txtFecha_acceso.ReadOnly = true;
             // 
-            // tH_claveTableAdapter
+            // txtID_seq2
             // 
-            this.tH_claveTableAdapter.ClearBeforeFill = true;
+            this.txtID_seq2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txtID_seq2.DataPropertyName = "ID_seq";
+            this.txtID_seq2.HeaderText = "ID";
+            this.txtID_seq2.Name = "txtID_seq2";
+            this.txtID_seq2.ReadOnly = true;
             // 
-            // iDseqDataGridViewTextBoxColumn
+            // txtID_usuario2
             // 
-            this.iDseqDataGridViewTextBoxColumn.DataPropertyName = "ID_seq";
-            this.iDseqDataGridViewTextBoxColumn.HeaderText = "ID_seq";
-            this.iDseqDataGridViewTextBoxColumn.Name = "iDseqDataGridViewTextBoxColumn";
-            this.iDseqDataGridViewTextBoxColumn.ReadOnly = true;
+            this.txtID_usuario2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txtID_usuario2.DataPropertyName = "ID_usuario";
+            this.txtID_usuario2.HeaderText = "Usuario";
+            this.txtID_usuario2.Name = "txtID_usuario2";
+            this.txtID_usuario2.ReadOnly = true;
             // 
-            // iDusuarioDataGridViewTextBoxColumn
+            // txtClave_ant
             // 
-            this.iDusuarioDataGridViewTextBoxColumn.DataPropertyName = "ID_usuario";
-            this.iDusuarioDataGridViewTextBoxColumn.HeaderText = "ID_usuario";
-            this.iDusuarioDataGridViewTextBoxColumn.Name = "iDusuarioDataGridViewTextBoxColumn";
+            this.txtClave_ant.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txtClave_ant.DataPropertyName = "Clave_ant";
+            this.txtClave_ant.HeaderText = "Clave_Anterior";
+            this.txtClave_ant.Name = "txtClave_ant";
+            this.txtClave_ant.ReadOnly = true;
             // 
-            // claveantDataGridViewTextBoxColumn
+            // txtFecha
             // 
-            this.claveantDataGridViewTextBoxColumn.DataPropertyName = "Clave_ant";
-            this.claveantDataGridViewTextBoxColumn.HeaderText = "Clave_ant";
-            this.claveantDataGridViewTextBoxColumn.Name = "claveantDataGridViewTextBoxColumn";
+            this.txtFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txtFecha.DataPropertyName = "Fecha";
+            this.txtFecha.HeaderText = "Fecha_Cambio";
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.ReadOnly = true;
             // 
-            // fechaDataGridViewTextBoxColumn
+            // btnAtras
             // 
-            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
-            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
-            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
-            // 
-            // tHaccesoBindingSource
-            // 
-            this.tHaccesoBindingSource.DataMember = "TH_acceso";
-            this.tHaccesoBindingSource.DataSource = this.practicaFinalDataSetBindingSource;
-            // 
-            // tH_accesoTableAdapter
-            // 
-            this.tH_accesoTableAdapter.ClearBeforeFill = true;
-            // 
-            // iDseqDataGridViewTextBoxColumn1
-            // 
-            this.iDseqDataGridViewTextBoxColumn1.DataPropertyName = "ID_seq";
-            this.iDseqDataGridViewTextBoxColumn1.HeaderText = "ID_seq";
-            this.iDseqDataGridViewTextBoxColumn1.Name = "iDseqDataGridViewTextBoxColumn1";
-            this.iDseqDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // iDusuarioDataGridViewTextBoxColumn1
-            // 
-            this.iDusuarioDataGridViewTextBoxColumn1.DataPropertyName = "ID_usuario";
-            this.iDusuarioDataGridViewTextBoxColumn1.HeaderText = "ID_usuario";
-            this.iDusuarioDataGridViewTextBoxColumn1.Name = "iDusuarioDataGridViewTextBoxColumn1";
-            this.iDusuarioDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // fechaaccesoDataGridViewTextBoxColumn
-            // 
-            this.fechaaccesoDataGridViewTextBoxColumn.DataPropertyName = "Fecha_acceso";
-            this.fechaaccesoDataGridViewTextBoxColumn.HeaderText = "Fecha_acceso";
-            this.fechaaccesoDataGridViewTextBoxColumn.Name = "fechaaccesoDataGridViewTextBoxColumn";
-            this.fechaaccesoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.btnAtras.Location = new System.Drawing.Point(614, 361);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(85, 31);
+            this.btnAtras.TabIndex = 4;
+            this.btnAtras.Text = "Atras";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // frm5Historial
             // 
@@ -196,6 +174,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(711, 404);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.dtgAccesos);
             this.Controls.Add(this.dtgCClave);
             this.Controls.Add(this.rtbAccesos);
@@ -205,10 +184,6 @@
             this.Load += new System.EventHandler(this.frm5Historial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgCClave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAccesos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.practicaFinalDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.practicaFinalDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tHclaveBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tHaccesoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,18 +195,13 @@
         private System.Windows.Forms.RadioButton rtbAccesos;
         private System.Windows.Forms.DataGridView dtgCClave;
         private System.Windows.Forms.DataGridView dtgAccesos;
-        private System.Windows.Forms.BindingSource practicaFinalDataSetBindingSource;
-        private PracticaFinalDataSet practicaFinalDataSet;
-        private System.Windows.Forms.BindingSource tHclaveBindingSource;
-        private PracticaFinalDataSetTableAdapters.TH_claveTableAdapter tH_claveTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDseqDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDusuarioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn claveantDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource tHaccesoBindingSource;
-        private PracticaFinalDataSetTableAdapters.TH_accesoTableAdapter tH_accesoTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDseqDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDusuarioDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaaccesoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtID_seq;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtID_usuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtFecha_acceso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtID_seq2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtID_usuario2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtClave_ant;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtFecha;
+        private System.Windows.Forms.Button btnAtras;
     }
 }
