@@ -97,12 +97,7 @@ namespace Practica_Final
             frm6.ShowDialog();
         }
 
-        private void btnABCCAdmin_Click(object sender, EventArgs e)
-        {
-            frm7MAdmin frm7 = new frm7MAdmin();
-            frm7.ShowDialog();
-        }
-
+       
         private void btnABCMMaestro_Click(object sender, EventArgs e)
         {
             frm8MMtro frm8 = new frm8MMtro();
@@ -112,6 +107,8 @@ namespace Practica_Final
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+            frm1 F = new frm1();
+            F.Show();
         }
     }
 }

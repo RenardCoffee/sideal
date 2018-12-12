@@ -16,7 +16,9 @@ namespace Practica_Final
 {
     public partial class frm1 : Form
     {
-        
+        //Brandon
+        private SqlConnection conexion = new SqlConnection("server=DESKTOP-KS5ITG4\\SQLUWU ; database=PracticaFinal ; integrated security = true");
+
         public frm1()
         {
             InitializeComponent();
@@ -65,6 +67,7 @@ namespace Practica_Final
                     frm2 frm2 = new frm2(cbxTipousu.SelectedItem.ToString());
                     frm2.Show();
                     this.Hide();
+
                 }
                 else if (cbxTipousu.Text == "MAESTRO")
                 {
@@ -86,8 +89,29 @@ namespace Practica_Final
             }
 
             //
-            
-            
+
+            // Trigger de acceso
+            conexion.Open();
+            string usu = txtUsuario.Text;
+            DateTime miDT = DateTime.Now;
+            string fechaReg = miDT.ToString("yyyy-MM-dd HH:mm:ss");
+
+            string cadena = "update T_usuarios set Fecha_acceso ='" + fechaReg + "' where ID_usuario=" + usu;
+            SqlCommand comando = new SqlCommand(cadena, conexion);
+            int cant;
+            cant = comando.ExecuteNonQuery();
+            if (cant == 1)
+            {
+
+            }
+            else
+                txtUsuario.Text = "";
+            txtClave.Text = "";
+
+            conexion.Close();
+            //
+
+
         }
 
         //Creamos un evento con el mismo nombre para caja una de las cajas
@@ -101,6 +125,8 @@ namespace Practica_Final
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+            
+            
         }
 
         private void linkCpass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

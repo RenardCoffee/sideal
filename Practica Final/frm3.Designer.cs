@@ -187,6 +187,7 @@
             this.Controls.Add(this.txtCusuario);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnGuardarCambios);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cambio de clave";

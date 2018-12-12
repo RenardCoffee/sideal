@@ -34,7 +34,6 @@
             this.lblAlumno = new System.Windows.Forms.Label();
             this.lblMaestro = new System.Windows.Forms.Label();
             this.grbAdmin = new System.Windows.Forms.GroupBox();
-            this.btnABCCAdmin = new System.Windows.Forms.Button();
             this.btnPMU = new System.Windows.Forms.Button();
             this.btnHistorial = new System.Windows.Forms.Button();
             this.btnCClaveAdmin = new System.Windows.Forms.Button();
@@ -86,30 +85,17 @@
             // 
             // grbAdmin
             // 
-            this.grbAdmin.Controls.Add(this.btnABCCAdmin);
             this.grbAdmin.Controls.Add(this.btnPMU);
             this.grbAdmin.Controls.Add(this.btnHistorial);
             this.grbAdmin.Controls.Add(this.btnCClaveAdmin);
             this.grbAdmin.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbAdmin.ForeColor = System.Drawing.Color.White;
-            this.grbAdmin.Location = new System.Drawing.Point(61, 274);
+            this.grbAdmin.Location = new System.Drawing.Point(157, 279);
             this.grbAdmin.Name = "grbAdmin";
-            this.grbAdmin.Size = new System.Drawing.Size(511, 137);
+            this.grbAdmin.Size = new System.Drawing.Size(358, 137);
             this.grbAdmin.TabIndex = 3;
             this.grbAdmin.TabStop = false;
             this.grbAdmin.Text = "Pantallas Administrador";
-            // 
-            // btnABCCAdmin
-            // 
-            this.btnABCCAdmin.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnABCCAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnABCCAdmin.Location = new System.Drawing.Point(356, 31);
-            this.btnABCCAdmin.Name = "btnABCCAdmin";
-            this.btnABCCAdmin.Size = new System.Drawing.Size(114, 82);
-            this.btnABCCAdmin.TabIndex = 5;
-            this.btnABCCAdmin.Text = "Altas, Bajas, Cambios, Consultas";
-            this.btnABCCAdmin.UseVisualStyleBackColor = false;
-            this.btnABCCAdmin.Click += new System.EventHandler(this.btnABCCAdmin_Click);
             // 
             // btnPMU
             // 
@@ -266,7 +252,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnABCCAdmin;
         private System.Windows.Forms.Button btnPMU;
         private System.Windows.Forms.Button btnHistorial;
         private System.Windows.Forms.Button btnCClaveAdmin;

@@ -1,14 +1,14 @@
 CREATE DATABASE PracticaFinal
-
+DROP TABLE T_usuarios
 CREATE TABLE T_usuarios(
 	ID_usuario int Primary key,
 	Nombre varchar(20),
 	Apellido varchar(20),
-	Clave int,
+	Clave varchar(20),
 	Sexo Char,
 	Rol varchar(20),
 	Fehca_registro date,
-	Fecha_acceso date,
+	Fecha_acceso datetime,
 	B_activo char
 
 );
@@ -41,7 +41,7 @@ SELECT * FROM T_usuarios;
 SELECT * FROM T_CALIFICACIONES;
 
 --
-
+DROP TABLE T_CALIFICACIONES
 --Tabla Calificaciones
 CREATE TABLE T_CALIFICACIONES(
 	ID_maestro int FOREIGN KEY REFERENCES T_usuarios(ID_usuario),
@@ -61,13 +61,6 @@ INSERT INTO T_CALIFICACIONES
 VALUES(193440930,593440123,100,'F','');
 --
 
---Tabla Aux Acceso
-CREATE TABLE aux_Acceso(
-	ID_usuario int Primary key not null,
-	clave varchar(20) not null
-);
---
-
 --Trigger de clave Prueba
 UPDATE T_usuarios 
 SET clave = 'Solovino321'
@@ -75,13 +68,13 @@ WHERE ID_usuario = 193440920
 --
 
 
-
+DROP TABLE TH_acceso
 --Tablas AUX para los Trigers
 CREATE TABLE TH_acceso
 (
  ID_seq INT IDENTITY(1,1),
  ID_usuario int not null, 
- Fecha_acceso date,
+ Fecha_acceso datetime,
 );
 --
 CREATE TABLE TH_clave

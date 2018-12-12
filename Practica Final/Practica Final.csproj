@@ -52,12 +52,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm7MAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm7MAdmin.Designer.cs">
-      <DependentUpon>frm7MAdmin.cs</DependentUpon>
-    </Compile>
     <Compile Include="frm2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,9 +98,6 @@
     <Compile Include="Usu.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm7MAdmin.resx">
-      <DependentUpon>frm7MAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm2.resx">
       <DependentUpon>frm2.cs</DependentUpon>
