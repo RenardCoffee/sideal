@@ -1,0 +1,16 @@
+c:\users\kawaii\documents\visual studio 2013\Projects\Practica Final\Practica Final\bin\Debug\Practica Final.exe.config
+c:\users\kawaii\documents\visual studio 2013\Projects\Practica Final\Practica Final\bin\Debug\Practica Final.exe
+c:\users\kawaii\documents\visual studio 2013\Projects\Practica Final\Practica Final\bin\Debug\Practica Final.pdb
+c:\users\kawaii\documents\visual studio 2013\Projects\Practica Final\Practica Final\obj\Debug\Practica Final.csprojResolveAssemblyReference.cache
+c:\users\kawaii\documents\visual studio 2013\Projects\Practica Final\Practica Final\obj\Debug\Practica_Final.Properties.Resources.resources
+c:\users\kawaii\documents\visual studio 2013\Projects\Practica Final\Practica Final\obj\Debug\Practica Final.csproj.GenerateResource.Cache
+c:\users\kawaii\documents\visual studio 2013\Projects\Practica Final\Practica Final\obj\Debug\Practica Final.exe
+c:\users\kawaii\documents\visual studio 2013\Projects\Practica Final\Practica Final\obj\Debug\Practica Final.pdb
+c:\users\kawaii\documents\visual studio 2013\Projects\Practica Final\Practica Final\obj\Debug\Practica_Final.frm1.resources
+c:\users\kawaii\documents\visual studio 2013\Projects\Practica Final\Practica Final\obj\Debug\Practica_Final.frm2.resources
+c:\users\kawaii\documents\visual studio 2013\Projects\Practica Final\Practica Final\obj\Debug\Practica_Final.frm3.resources
+c:\users\kawaii\documents\visual studio 2013\Projects\Practica Final\Practica Final\obj\Debug\Practica_Final.frm4Kardex.resources
+c:\users\kawaii\documents\visual studio 2013\Projects\Practica Final\Practica Final\obj\Debug\Practica_Final.frm5Historial.resources
+c:\users\kawaii\documents\visual studio 2013\Projects\Practica Final\Practica Final\obj\Debug\Practica_Final.frm6PMU.resources
+c:\users\kawaii\documents\visual studio 2013\Projects\Practica Final\Practica Final\obj\Debug\Practica_Final.frm7MAdmin.resources
+c:\users\kawaii\documents\visual studio 2013\Projects\Practica Final\Practica Final\obj\Debug\Practica_Final.frm8MMtro.resources
