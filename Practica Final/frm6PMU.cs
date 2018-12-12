@@ -52,7 +52,7 @@ namespace Practica_Final
                         sqlCmd.Parameters.AddWithValue("@ID_usuario", Convert.ToInt32(dgvRow.Cells["txtID_usuario"].Value));
                     sqlCmd.Parameters.AddWithValue("@Nombre", dgvRow.Cells["txtNombre"].Value == DBNull.Value ? "" : dgvRow.Cells["txtNombre"].Value.ToString());
                     sqlCmd.Parameters.AddWithValue("@Apellido", dgvRow.Cells["txtApellido"].Value == DBNull.Value ? "" : dgvRow.Cells["txtApellido"].Value.ToString());
-                    sqlCmd.Parameters.AddWithValue("@Clave ", dgvRow.Cells["txtClave"].Value == DBNull.Value ? "0" : dgvRow.Cells["txtClave"].Value.ToString());
+                    sqlCmd.Parameters.AddWithValue("@Clave ", dgvRow.Cells["txtClave"].Value == DBNull.Value ? "" : dgvRow.Cells["txtClave"].Value.ToString());
                     sqlCmd.Parameters.AddWithValue("@Sexo", dgvRow.Cells["txtSexo"].Value == DBNull.Value ? "" : dgvRow.Cells["txtSexo"].Value.ToString());
                     sqlCmd.Parameters.AddWithValue("@Rol", dgvRow.Cells["txtRol"].Value == DBNull.Value ? "" : dgvRow.Cells["txtRol"].Value.ToString());
                     sqlCmd.Parameters.AddWithValue("@Fehca_registro", dgvRow.Cells["txtFehca_registro"].Value == DBNull.Value ? "" : dgvRow.Cells["txtFehca_registro"].Value.ToString());

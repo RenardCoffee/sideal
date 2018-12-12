@@ -120,7 +120,7 @@ AS
 	select @usupass=i.Clave from inserted i;
 	select @usupass_old=d.Clave from deleted d;	
 
-	if update(clave)
+	if update(Clave)
 	insert into TH_clave
            (ID_usuario,Clave_ant,Fecha) 
 	values(@usuid,@usupass_old,getdate());
@@ -140,7 +140,7 @@ SELECT (AVG(Calificacion)) AS Promedio,MAX(Calificacion) AS CalificacionMax,MIN(
 
 GO;
 --
-
+DROP VIEW v_consulta
 --VistaContulta
 CREATE VIEW v_consulta AS
 SELECT * FROM T_usuarios

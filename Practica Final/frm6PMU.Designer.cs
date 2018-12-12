@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm6PMU));
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.txtID_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,7 +40,6 @@
             this.txtFehca_registro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtFecha_acceso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtB_activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAtras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +62,16 @@
             this.dgvUsuarios.TabIndex = 0;
             this.dgvUsuarios.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellValueChanged);
             this.dgvUsuarios.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvUsuarios_UserDeletingRow);
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.Location = new System.Drawing.Point(772, 372);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(83, 27);
+            this.btnAtras.TabIndex = 1;
+            this.btnAtras.Text = "Atras";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // txtID_usuario
             // 
@@ -111,22 +121,13 @@
             this.txtFecha_acceso.DataPropertyName = "Fecha_acceso";
             this.txtFecha_acceso.HeaderText = "Fecha_acceso";
             this.txtFecha_acceso.Name = "txtFecha_acceso";
+            this.txtFecha_acceso.ReadOnly = true;
             // 
             // txtB_activo
             // 
             this.txtB_activo.DataPropertyName = "B_activo";
             this.txtB_activo.HeaderText = "B_activo";
             this.txtB_activo.Name = "txtB_activo";
-            // 
-            // btnAtras
-            // 
-            this.btnAtras.Location = new System.Drawing.Point(772, 372);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(83, 27);
-            this.btnAtras.TabIndex = 1;
-            this.btnAtras.Text = "Atras";
-            this.btnAtras.UseVisualStyleBackColor = true;
-            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // frm6PMU
             // 
@@ -148,6 +149,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvUsuarios;
+        private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtID_usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtApellido;
@@ -157,6 +159,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn txtFehca_registro;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtFecha_acceso;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtB_activo;
-        private System.Windows.Forms.Button btnAtras;
     }
 }

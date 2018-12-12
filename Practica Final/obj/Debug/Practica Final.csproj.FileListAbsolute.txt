@@ -19,7 +19,6 @@ C:\Users\Sven\Documents\Projectss\SiDeAl\Practica Final\bin\Debug\Practica Final
 C:\Users\Sven\Documents\Projectss\SiDeAl\Practica Final\bin\Debug\Practica Final.pdb
 C:\Users\Sven\Documents\Projectss\SiDeAl\Practica Final\obj\Debug\Practica Final.csprojAssemblyReference.cache
 C:\Users\Sven\Documents\Projectss\SiDeAl\Practica Final\obj\Debug\Practica_Final.frm1.resources
-C:\Users\Sven\Documents\Projectss\SiDeAl\Practica Final\obj\Debug\Practica_Final.frm7MAdmin.resources
 C:\Users\Sven\Documents\Projectss\SiDeAl\Practica Final\obj\Debug\Practica_Final.frm2.resources
 C:\Users\Sven\Documents\Projectss\SiDeAl\Practica Final\obj\Debug\Practica_Final.frm3.resources
 C:\Users\Sven\Documents\Projectss\SiDeAl\Practica Final\obj\Debug\Practica_Final.frm4Kardex.resources

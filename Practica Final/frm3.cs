@@ -52,15 +52,16 @@ namespace Practica_Final
             cant = comando.ExecuteNonQuery();
             if (cant == 1)
             {
-                MessageBox.Show("No se puede cambiar esa clave");
+                MessageBox.Show("Se cambio la clave");
+                txtClaveActual.Text = "";
+                txtCusuario.Text = "";
+                txtNClave.Text = "";
+                btnConfirmar.Text = "";
+                btnGuardarCambios.Enabled = false;
+                
             }
             else
-                MessageBox.Show("Se cambio la clave");
-            txtClaveActual.Text = "";
-            txtCusuario.Text = "";
-            txtNClave.Text = "";
-            btnConfirmar.Text = "";
-            btnGuardarCambios.Enabled = false;
+                MessageBox.Show("No se puede cambiar esa clave");
 
             conexion.Close();
         }

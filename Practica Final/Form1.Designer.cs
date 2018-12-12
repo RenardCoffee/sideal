@@ -40,7 +40,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.linkCpass = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -165,7 +164,7 @@
             // 
             this.linkCpass.AutoSize = true;
             this.linkCpass.LinkColor = System.Drawing.Color.White;
-            this.linkCpass.Location = new System.Drawing.Point(13, 183);
+            this.linkCpass.Location = new System.Drawing.Point(34, 206);
             this.linkCpass.Name = "linkCpass";
             this.linkCpass.Size = new System.Drawing.Size(75, 13);
             this.linkCpass.TabIndex = 8;
@@ -174,25 +173,12 @@
             this.linkCpass.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.linkCpass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCpass_LinkClicked);
             // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.LinkColor = System.Drawing.Color.White;
-            this.linkLabel2.Location = new System.Drawing.Point(12, 215);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(60, 13);
-            this.linkLabel2.TabIndex = 9;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Registrarse";
-            this.linkLabel2.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            // 
             // frm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(401, 259);
-            this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkCpass);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.pictureBox1);
@@ -222,7 +208,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.LinkLabel linkCpass;
-        private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbxTipousu;
     }
