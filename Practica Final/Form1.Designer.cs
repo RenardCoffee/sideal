@@ -35,13 +35,12 @@
             this.txtClave = new System.Windows.Forms.TextBox();
             this.btnAcceder = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbxTipousu = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.rdbMaestro = new System.Windows.Forms.RadioButton();
-            this.rdbAlu = new System.Windows.Forms.RadioButton();
-            this.rdbAdmin = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -80,8 +79,10 @@
             this.txtClave.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClave.Location = new System.Drawing.Point(86, 74);
             this.txtClave.Name = "txtClave";
+            this.txtClave.PasswordChar = '*';
             this.txtClave.Size = new System.Drawing.Size(100, 21);
             this.txtClave.TabIndex = 3;
+            this.txtClave.UseSystemPasswordChar = true;
             this.txtClave.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
             // btnAcceder
@@ -99,9 +100,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.rdbAdmin);
-            this.groupBox1.Controls.Add(this.rdbAlu);
-            this.groupBox1.Controls.Add(this.rdbMaestro);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.cbxTipousu);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtClave);
@@ -113,6 +113,28 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Inicio de sesión";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(40, 115);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 15);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Tipo:";
+            // 
+            // cbxTipousu
+            // 
+            this.cbxTipousu.FormattingEnabled = true;
+            this.cbxTipousu.Items.AddRange(new object[] {
+            "ADMIN",
+            "MAESTRO",
+            "ALUMNO"});
+            this.cbxTipousu.Location = new System.Drawing.Point(86, 113);
+            this.cbxTipousu.Name = "cbxTipousu";
+            this.cbxTipousu.Size = new System.Drawing.Size(100, 21);
+            this.cbxTipousu.TabIndex = 4;
             // 
             // pictureBox1
             // 
@@ -161,39 +183,6 @@
             this.linkLabel2.Text = "Registrarse";
             this.linkLabel2.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             // 
-            // rdbMaestro
-            // 
-            this.rdbMaestro.AutoSize = true;
-            this.rdbMaestro.Location = new System.Drawing.Point(12, 110);
-            this.rdbMaestro.Name = "rdbMaestro";
-            this.rdbMaestro.Size = new System.Drawing.Size(63, 17);
-            this.rdbMaestro.TabIndex = 4;
-            this.rdbMaestro.TabStop = true;
-            this.rdbMaestro.Text = "Maestro";
-            this.rdbMaestro.UseVisualStyleBackColor = true;
-            // 
-            // rdbAlu
-            // 
-            this.rdbAlu.AutoSize = true;
-            this.rdbAlu.Location = new System.Drawing.Point(147, 110);
-            this.rdbAlu.Name = "rdbAlu";
-            this.rdbAlu.Size = new System.Drawing.Size(60, 17);
-            this.rdbAlu.TabIndex = 5;
-            this.rdbAlu.TabStop = true;
-            this.rdbAlu.Text = "Alumno";
-            this.rdbAlu.UseVisualStyleBackColor = true;
-            // 
-            // rdbAdmin
-            // 
-            this.rdbAdmin.AutoSize = true;
-            this.rdbAdmin.Location = new System.Drawing.Point(62, 133);
-            this.rdbAdmin.Name = "rdbAdmin";
-            this.rdbAdmin.Size = new System.Drawing.Size(88, 17);
-            this.rdbAdmin.TabIndex = 6;
-            this.rdbAdmin.TabStop = true;
-            this.rdbAdmin.Text = "Administrador";
-            this.rdbAdmin.UseVisualStyleBackColor = true;
-            // 
             // frm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,11 +218,10 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.RadioButton rdbAdmin;
-        private System.Windows.Forms.RadioButton rdbAlu;
-        private System.Windows.Forms.RadioButton rdbMaestro;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbxTipousu;
     }
 }
 

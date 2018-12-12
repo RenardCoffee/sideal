@@ -22,9 +22,41 @@ namespace Practica_Final
         {
             InitializeComponent();
         }
-
+        public frm2(bool rdbAdmin,bool rdbAlu, bool rdbMas)
+        {
+            if(rdbAdmin == true)
+            {
+                lblAdmin.Visible = true;
+                btnCClaveAdmin.Enabled = true;
+                btnABCCAdmin.Enabled = true;
+                btnHistorial.Enabled = true;
+                btnPMU.Enabled = true;
+            }
+            if(rdbAlu == true)
+            {
+                lblAlumno.Visible = true;
+                btnKardex.Enabled = true;
+                btnCambiarClave.Enabled = true;
+            }
+            if(rdbMas == true)
+            {
+                lblMaestro.Visible = true;
+                btnABCMMaestro.Enabled = true;
+                btnCClaveMaestro.Visible = true;
+            }
+        }
         private void frm2_Load(object sender, EventArgs e)
         {
+            lblAdmin.Visible = false;
+            lblAlumno.Visible = false;
+            lblMaestro.Visible = false;
+            btnABCCAdmin.Enabled = false;
+            btnABCMMaestro.Enabled = false;
+            btnCambiarClave.Enabled = false;
+            btnCClaveAdmin.Enabled = false;
+            btnCClaveMaestro.Enabled = false;
+            btnKardex.Enabled = false;
+            btnPMU.Enabled = false;
             
         }
 

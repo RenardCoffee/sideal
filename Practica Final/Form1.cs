@@ -15,11 +15,11 @@ using System.Data.SqlClient;
 namespace Practica_Final
 {
     public partial class frm1 : Form
-    {   
+    {
         //Computadora Brandon
-        private SqlConnection conexion = new SqlConnection("server=DESKTOP-KS5ITG4\\SQLUWU ; database=PracticaFinal ; integrated security = true");
+        //string con = "server=DESKTOP-KS5ITG4\\SQLUWU ; database=PracticaFinal ; integrated security = true";
         //Computadora Priss
-        //private SqlConnection conexion = new SqlConnection("server=LAPTOP-QSFU5A2T\\SQLEXPRESS ; database=PracticaFinal ; integrated security = true");
+        private SqlConnection conexion = new SqlConnection("server=server=DESKTOP-KS5ITG4\\SQLUWU ; database=PracticaFinal ; integrated security = true");
 
         public frm1()
         {
@@ -40,9 +40,7 @@ namespace Practica_Final
                         {
                             //MessageBox.Show("Login Correcto");
                             //Se crea una nueva forma para dirigirnos al menú principal
-                            frm2 frm2 = new frm2();
-                            frm2.Show();
-                            this.Hide();
+                           
                         }
                         else
                         {
@@ -63,12 +61,15 @@ namespace Practica_Final
         {
             //Deshabilitamos el botón de acceso 
             btnAcceder.Enabled = false;
+            cbxTipousu.Text = "ADMIN";
+            
         }
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
             
-            logins();
+            //logins();
+
             //Declaración de variables 
             int usuario;
             string Clave;
@@ -83,6 +84,34 @@ namespace Practica_Final
                 usuario = int.Parse(txtUsuario.Text);
                 Clave = txtClave.Text;
             }
+
+
+            //Con la Verificacion De tipo
+            Usu UsuOBj = new Usu();
+            UsuOBj.Us = txtUsuario.Text;
+            UsuOBj.Pas = txtClave.Text;
+            UsuOBj.Tip = cbxTipousu.SelectedItem.ToString();
+
+            if (UsuOBj.Busco() == true)
+            {
+                if (cbxTipousu.Text == "ADMIN")
+                {
+                    MessageBox.Show(UsuOBj.Mensaje, "Administrador");
+                    //frm2 frm2 = new frm2();
+                    //frm2.Show();
+                    //this.Hide();
+                }
+                else if (cbxTipousu.Text == "MAESTRO")
+                {
+                    MessageBox.Show(UsuOBj.Mensaje, "Maestro");
+                }
+                else if(cbxTipousu.Text == "ALUMNO") { MessageBox.Show(UsuOBj.Mensaje, "Estudiante"); }
+            }
+            else {
+                MessageBox.Show(UsuOBj.Mensaje, "Usuario no existe!");
+            }
+
+            //
             
             
         }

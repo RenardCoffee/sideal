@@ -14,3 +14,20 @@ c:\users\kawaii\documents\visual studio 2013\Projects\Practica Final\Practica Fi
 c:\users\kawaii\documents\visual studio 2013\Projects\Practica Final\Practica Final\obj\Debug\Practica_Final.frm6PMU.resources
 c:\users\kawaii\documents\visual studio 2013\Projects\Practica Final\Practica Final\obj\Debug\Practica_Final.frm7MAdmin.resources
 c:\users\kawaii\documents\visual studio 2013\Projects\Practica Final\Practica Final\obj\Debug\Practica_Final.frm8MMtro.resources
+C:\Users\Sven\Documents\Projectss\SiDeAl\Practica Final\bin\Debug\Practica Final.exe.config
+C:\Users\Sven\Documents\Projectss\SiDeAl\Practica Final\bin\Debug\Practica Final.exe
+C:\Users\Sven\Documents\Projectss\SiDeAl\Practica Final\bin\Debug\Practica Final.pdb
+C:\Users\Sven\Documents\Projectss\SiDeAl\Practica Final\obj\Debug\Practica Final.csprojAssemblyReference.cache
+C:\Users\Sven\Documents\Projectss\SiDeAl\Practica Final\obj\Debug\Practica_Final.frm1.resources
+C:\Users\Sven\Documents\Projectss\SiDeAl\Practica Final\obj\Debug\Practica_Final.frm7MAdmin.resources
+C:\Users\Sven\Documents\Projectss\SiDeAl\Practica Final\obj\Debug\Practica_Final.frm2.resources
+C:\Users\Sven\Documents\Projectss\SiDeAl\Practica Final\obj\Debug\Practica_Final.frm3.resources
+C:\Users\Sven\Documents\Projectss\SiDeAl\Practica Final\obj\Debug\Practica_Final.frm4Kardex.resources
+C:\Users\Sven\Documents\Projectss\SiDeAl\Practica Final\obj\Debug\Practica_Final.frm5Historial.resources
+C:\Users\Sven\Documents\Projectss\SiDeAl\Practica Final\obj\Debug\Practica_Final.frm6PMU.resources
+C:\Users\Sven\Documents\Projectss\SiDeAl\Practica Final\obj\Debug\Practica_Final.frm8MMtro.resources
+C:\Users\Sven\Documents\Projectss\SiDeAl\Practica Final\obj\Debug\Practica_Final.Properties.Resources.resources
+C:\Users\Sven\Documents\Projectss\SiDeAl\Practica Final\obj\Debug\Practica Final.csproj.GenerateResource.cache
+C:\Users\Sven\Documents\Projectss\SiDeAl\Practica Final\obj\Debug\Practica Final.csproj.CoreCompileInputs.cache
+C:\Users\Sven\Documents\Projectss\SiDeAl\Practica Final\obj\Debug\Practica Final.exe
+C:\Users\Sven\Documents\Projectss\SiDeAl\Practica Final\obj\Debug\Practica Final.pdb
