@@ -108,5 +108,10 @@ namespace Practica_Final
             frm8MMtro frm8 = new frm8MMtro();
             frm8.ShowDialog();
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

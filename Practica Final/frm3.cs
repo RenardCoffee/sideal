@@ -27,12 +27,12 @@ namespace Practica_Final
         {
             conexion.Open();
             string usu = txtCusuario.Text;
-            string cadena = "select clave from aux_Acceso where ID_usuario=" + usu;
+            string cadena = "select Clave from T_usuarios where ID_usuario=" + usu;
             SqlCommand comando = new SqlCommand(cadena, conexion);
             SqlDataReader registro = comando.ExecuteReader();
             if (registro.Read())
             {
-                txtClaveActual.Text = registro["clave"].ToString();
+                txtClaveActual.Text = registro["Clave"].ToString();
                 btnGuardarCambios.Enabled = true;
             }
             else
@@ -46,7 +46,7 @@ namespace Practica_Final
             string usu = txtCusuario.Text;
             string cvieja = txtClaveActual.Text;
             string cnueva = txtNClave.Text;
-            string cadena = "update aux_Acceso set clave ='" + cnueva + "' where ID_usuario=" + usu;
+            string cadena = "update T_usuarios set Clave ='" + cnueva + "' where ID_usuario=" + usu;
             SqlCommand comando = new SqlCommand(cadena, conexion);
             int cant;
             cant = comando.ExecuteNonQuery();

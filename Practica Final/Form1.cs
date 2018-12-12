@@ -16,46 +16,13 @@ namespace Practica_Final
 {
     public partial class frm1 : Form
     {
-        //Computadora Brandon
-        //string con = "server=DESKTOP-KS5ITG4\\SQLUWU ; database=PracticaFinal ; integrated security = true";
-        //Computadora Priss
-        private SqlConnection conexion = new SqlConnection("server=server=DESKTOP-KS5ITG4\\SQLUWU ; database=PracticaFinal ; integrated security = true");
-
+        
         public frm1()
         {
             InitializeComponent();
         }
 
-        public void logins()
-        {
-            try
-            {
-                using (conexion)
-                {
-                    conexion.Open();
-                    using (SqlCommand cmd = new SqlCommand("SELECT ID_usuario, clave FROM aux_Acceso WHERE ID_usuario= '" + txtUsuario.Text + "' AND clave='" + txtClave.Text + "'", conexion))
-                    {
-                        SqlDataReader dr = cmd.ExecuteReader();
-                        if (dr.Read())
-                        {
-                            //MessageBox.Show("Login Correcto");
-                            //Se crea una nueva forma para dirigirnos al menú principal
-                           
-                        }
-                        else
-                        {
-                            MessageBox.Show("Usuario no esta registrado");
-                        }
-                    }
-                }
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-
-            }
-        }
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -67,8 +34,6 @@ namespace Practica_Final
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            
-            //logins();
 
             //Declaración de variables 
             int usuario;

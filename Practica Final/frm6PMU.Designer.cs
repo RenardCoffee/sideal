@@ -28,214 +28,135 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm6PMU));
+            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.txtID_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtClave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtSexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtFehca_registro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtFecha_acceso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtB_activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAtras = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // dgvUsuarios
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(35, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID Usuario:";
+            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.txtID_usuario,
+            this.txtNombre,
+            this.txtApellido,
+            this.txtClave,
+            this.txtSexo,
+            this.txtRol,
+            this.txtFehca_registro,
+            this.txtFecha_acceso,
+            this.txtB_activo});
+            this.dgvUsuarios.Location = new System.Drawing.Point(12, 12);
+            this.dgvUsuarios.Name = "dgvUsuarios";
+            this.dgvUsuarios.Size = new System.Drawing.Size(844, 337);
+            this.dgvUsuarios.TabIndex = 0;
+            this.dgvUsuarios.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellValueChanged);
+            this.dgvUsuarios.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvUsuarios_UserDeletingRow);
             // 
-            // label2
+            // txtID_usuario
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(35, 67);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nombre:";
+            this.txtID_usuario.DataPropertyName = "ID_usuario";
+            this.txtID_usuario.HeaderText = "ID";
+            this.txtID_usuario.Name = "txtID_usuario";
+            this.txtID_usuario.Visible = false;
             // 
-            // label3
+            // txtNombre
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(35, 97);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Apellido:";
+            this.txtNombre.DataPropertyName = "Nombre";
+            this.txtNombre.HeaderText = "Nombre";
+            this.txtNombre.Name = "txtNombre";
             // 
-            // label4
+            // txtApellido
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(35, 127);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 15);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Clave:";
+            this.txtApellido.DataPropertyName = "Apellido";
+            this.txtApellido.HeaderText = "Apellido";
+            this.txtApellido.Name = "txtApellido";
             // 
-            // label5
+            // txtClave
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(39, 161);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 15);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Sexo:";
+            this.txtClave.DataPropertyName = "Clave";
+            this.txtClave.HeaderText = "Clave";
+            this.txtClave.Name = "txtClave";
             // 
-            // label6
+            // txtSexo
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(39, 198);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(30, 15);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Rol:";
+            this.txtSexo.DataPropertyName = "Sexo";
+            this.txtSexo.HeaderText = "Genero";
+            this.txtSexo.Name = "txtSexo";
             // 
-            // label7
+            // txtRol
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(12, 226);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 15);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Fecha de registro:";
+            this.txtRol.DataPropertyName = "Rol";
+            this.txtRol.HeaderText = "Rol";
+            this.txtRol.Name = "txtRol";
             // 
-            // label8
+            // txtFehca_registro
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(39, 254);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 15);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "B_Activo:";
+            this.txtFehca_registro.DataPropertyName = "Fehca_registro";
+            this.txtFehca_registro.HeaderText = "Fehca_registro";
+            this.txtFehca_registro.Name = "txtFehca_registro";
             // 
-            // textBox1
+            // txtFecha_acceso
             // 
-            this.textBox1.Location = new System.Drawing.Point(136, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 8;
+            this.txtFecha_acceso.DataPropertyName = "Fecha_acceso";
+            this.txtFecha_acceso.HeaderText = "Fecha_acceso";
+            this.txtFecha_acceso.Name = "txtFecha_acceso";
             // 
-            // textBox2
+            // txtB_activo
             // 
-            this.textBox2.Location = new System.Drawing.Point(136, 65);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 9;
+            this.txtB_activo.DataPropertyName = "B_activo";
+            this.txtB_activo.HeaderText = "B_activo";
+            this.txtB_activo.Name = "txtB_activo";
             // 
-            // textBox3
+            // btnAtras
             // 
-            this.textBox3.Location = new System.Drawing.Point(136, 95);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 10;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(136, 125);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 11;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(136, 159);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 12;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(136, 196);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 13;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(136, 226);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 14;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(136, 254);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 15;
+            this.btnAtras.Location = new System.Drawing.Point(772, 372);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(83, 27);
+            this.btnAtras.TabIndex = 1;
+            this.btnAtras.Text = "Atras";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // frm6PMU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(617, 366);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(874, 411);
+            this.Controls.Add(this.btnAtras);
+            this.Controls.Add(this.dgvUsuarios);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm6PMU";
             this.Text = "Pantalla Maestra Usuarios";
+            this.Load += new System.EventHandler(this.frm6PMU_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.DataGridView dgvUsuarios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtID_usuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtApellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtClave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtSexo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtRol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtFehca_registro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtFecha_acceso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtB_activo;
+        private System.Windows.Forms.Button btnAtras;
     }
 }

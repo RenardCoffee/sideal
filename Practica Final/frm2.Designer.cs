@@ -45,6 +45,7 @@
             this.btnKardex = new System.Windows.Forms.Button();
             this.btnCambiarClave = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btnSalir = new System.Windows.Forms.Button();
             this.grbAdmin.SuspendLayout();
             this.grbMaestro.SuspendLayout();
             this.grbAlumno.SuspendLayout();
@@ -227,12 +228,24 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // btnSalir
+            // 
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalir.Location = new System.Drawing.Point(632, 393);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(102, 38);
+            this.btnSalir.TabIndex = 5;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // frm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(647, 438);
+            this.ClientSize = new System.Drawing.Size(746, 443);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.grbAlumno);
             this.Controls.Add(this.grbMaestro);
             this.Controls.Add(this.grbAdmin);
@@ -268,5 +281,6 @@
         public System.Windows.Forms.GroupBox grbAdmin;
         public System.Windows.Forms.GroupBox grbAlumno;
         internal System.Windows.Forms.GroupBox grbMaestro;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

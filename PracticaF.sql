@@ -39,7 +39,7 @@ VALUES(193440930,'Cecilia','Arana',1234,'F','MAESTRO','2016-05-01','','T');
 --Pruebas
 SELECT * FROM T_usuarios;
 SELECT * FROM T_CALIFICACIONES;
-SELECT * FROM aux_Acceso;
+
 --
 
 --Tabla Calificaciones
@@ -69,15 +69,12 @@ CREATE TABLE aux_Acceso(
 --
 
 --Trigger de clave Prueba
-UPDATE aux_Acceso 
+UPDATE T_usuarios 
 SET clave = 'Solovino321'
 WHERE ID_usuario = 193440920
 --
 
---LLenado de claves
-INSERT INTO aux_Acceso
-VALUES(193440920,'Prueba123');
---
+
 
 --Tablas AUX para los Trigers
 CREATE TABLE TH_acceso
@@ -117,8 +114,9 @@ AS
 	PRINT 'Acceso trigger disparado.'
 GO
 --
+DROP TRIGGER TR_I_CLAVES
 --Trigger cambio de clave
-CREATE TRIGGER TR_I_CLAVES ON [dbo].[aux_Acceso]  
+CREATE TRIGGER TR_I_CLAVES ON [dbo].[T_usuarios]  
 FOR UPDATE
 AS
 	declare @usuid int;
@@ -126,8 +124,8 @@ AS
 	declare @usupass_old varchar(20);
 
 	select @usuid=i.ID_usuario from inserted i;
-	select @usupass=i.clave from inserted i;
-	select @usupass_old=d.clave from deleted d;	
+	select @usupass=i.Clave from inserted i;
+	select @usupass_old=d.Clave from deleted d;	
 
 	if update(clave)
 	insert into TH_clave

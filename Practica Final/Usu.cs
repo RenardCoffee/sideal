@@ -40,7 +40,7 @@ namespace Practica_Final
         public bool Busco()
         {
             bool res = false;
-            this.sql = string.Format(@"SELECT ID_usuario FROM aux_Acceso WHERE ID_usuario='{0}' AND clave='{1}' AND Tipo='{2}'",this.Us, this.Pas,this.tipo);
+            this.sql = string.Format(@"SELECT ID_usuario FROM T_usuarios WHERE ID_usuario='{0}' AND Clave='{1}' AND Rol='{2}'", this.Us, this.Pas,this.tipo);
             this.cmdsql = new SqlCommand(this.sql, this.cnn);
             this.cnn.Open();
             SqlDataReader Reg = null;
